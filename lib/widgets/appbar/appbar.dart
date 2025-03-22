@@ -1,5 +1,3 @@
-import 'package:iconsax/iconsax.dart';
-
 import '/utils/exports.dart';
 
 class WAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -43,6 +41,5 @@ class WAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  // TODO: implement preferredSize
   Size get preferredSize => Size.fromHeight(WDeviceUtils.getAppBarHeight());
 }

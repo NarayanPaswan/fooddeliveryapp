@@ -1,5 +1,6 @@
-import 'package:fooddelivery/widgets/appbar/appbar.dart';
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 
+import '/widgets/appbar/appbar.dart';
 import '/utils/exports.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -35,6 +36,48 @@ class _HomeScreenState extends State<HomeScreen> {
                           WTexts.homeAppbarSubTitle,
                           style: Theme.of(context).textTheme.headlineSmall!
                               .apply(color: WColors.white),
+                        ),
+                      ],
+                    ),
+                    action: [
+                      WCounterIcon(onPressed: () {}, iconcolor: WColors.white),
+                    ],
+                  ),
+                  //search bar
+                  SizedBox(height: WSizes.spaceBtwItems),
+                  WSearchContainer(text: WTexts.searchYourFood),
+                  //category heding
+                  SizedBox(height: WSizes.spaceBtwItems),
+                  Padding(
+                    padding: const EdgeInsets.only(left: WSizes.defaultSpace),
+                    child: Column(
+                      children: [
+                        WSectionHeading(
+                          title: WTexts.categories,
+                          textColor: WColors.textWhite,
+                        ),
+                        //category list
+                        SizedBox(height: WSizes.spaceBtwItems),
+                        SizedBox(
+                          height:
+                              MediaQuery.of(context).size.height *
+                              0.12, //     (100 / 812),
+                          child: ListView.builder(
+                            shrinkWrap: true,
+                            itemCount: 6,
+                            scrollDirection: Axis.horizontal,
+                            itemBuilder: (_, index) {
+                              return WCategoryList(
+                                image: WImages.google,
+                                title: WTexts.breakfast,
+                                onTap: () {
+                                  if (kDebugMode) {
+                                    print("your category");
+                                  }
+                                },
+                              );
+                            },
+                          ),
                         ),
                       ],
                     ),

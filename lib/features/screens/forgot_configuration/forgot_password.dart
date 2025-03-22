@@ -1,7 +1,5 @@
 import 'package:fooddelivery/features/screens/authentication/login/login.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:provider/provider.dart';
-
 import '../../../controller/authControllerProvider/auth_controller_provider.dart';
 import '/utils/exports.dart';
 

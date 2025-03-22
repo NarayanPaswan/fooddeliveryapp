@@ -73,4 +73,7 @@ class WTexts {
   static const String homeClient = "Home Client";
   static const String homeAdmin = "Home Admin";
   static const String workingWithExcellent = "WORKING WITH EXCELLENT";
+  static const String categories = "Categories";
+  static const String searchYourFood = "Search your food";
+  static const String breakfast = "Breakfast";
 }

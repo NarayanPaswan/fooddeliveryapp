@@ -1,5 +1,7 @@
 export 'dart:convert';
 export 'package:flutter/material.dart';
+export 'package:flutter/foundation.dart';
+export 'package:iconsax/iconsax.dart';
 export '../utils/constants/colors.dart';
 export '../utils/constants/enums.dart';
 export '../utils/constants/image_string.dart';
@@ -34,3 +36,7 @@ export '../widgets/wcircular_container.dart';
 export '../widgets/curved_widget/wcurved_edge.dart';
 export '../widgets/curved_widget/wcurved_edge_widget.dart';
 export '../widgets/wprimary_header_container.dart';
+export '../widgets/wcounter_icon.dart';
+export '../widgets/wsearch_container.dart';
+export '../widgets/wsection_heading.dart';
+export '../widgets/wcategory_list.dart';

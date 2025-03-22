@@ -1,6 +1,5 @@
 import 'package:flutter/gestures.dart';
 import 'package:fooddelivery/features/screens/authentication/login/login.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 import '../../../../controller/authControllerProvider/auth_controller_provider.dart';

@@ -1,6 +1,4 @@
-import 'package:flutter/foundation.dart';
-import 'package:fooddelivery/widgets/wsocial_button.dart';
-import 'package:iconsax/iconsax.dart';
+import '/widgets/wsocial_button.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../../../notificationservice/local_notification_service.dart';
