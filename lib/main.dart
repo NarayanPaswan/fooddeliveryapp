@@ -1,4 +1,5 @@
 import 'package:firebase_core/firebase_core.dart';
+import 'package:fooddelivery/controller/home_controller_provider.dart';
 import 'package:fooddelivery/splash_screen.dart';
 import 'package:provider/provider.dart';
 import 'controller/authControllerProvider/auth_controller_provider.dart';
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
           create: (_) => AuthenticationControllerProvider(),
         ),
         ChangeNotifierProvider(create: (_) => DatabaseControllerProvider()),
+        ChangeNotifierProvider(create: (_) => HomeControllerProvider()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

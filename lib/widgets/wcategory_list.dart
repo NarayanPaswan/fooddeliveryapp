@@ -40,7 +40,7 @@ class WCategoryList extends StatelessWidget {
               ),
               child: Center(
                 child: Image(
-                  image: AssetImage(image),
+                  image: NetworkImage(image),
                   fit: BoxFit.cover,
                   // color: dark ? WColors.light : WColors.dark,
                 ),
@@ -51,14 +51,16 @@ class WCategoryList extends StatelessWidget {
             SizedBox(
               width:
                   MediaQuery.of(context).size.width *
-                  0.17, // approx 68 on 375 screen width 68*100/375
-              child: Text(
-                title,
-                style: Theme.of(
-                  context,
-                ).textTheme.labelMedium!.apply(color: textColor),
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
+                  0.18, // approx 68 on 375 screen width 68*100/375
+              child: Center(
+                child: Text(
+                  title,
+                  style: Theme.of(
+                    context,
+                  ).textTheme.labelMedium!.apply(color: textColor),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                ),
               ),
             ),
           ],

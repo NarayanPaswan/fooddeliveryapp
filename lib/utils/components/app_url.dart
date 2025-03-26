@@ -1,15 +1,16 @@
 class AppUrl {
-  // static const String baseUrl = "https://admin.fasttechcomputer.in/api/";
-  // static const String profilePicUrl =
-  //     "https://admin.fasttechcomputer.in/public/storage/users/";
-  static const String baseUrl = "http://192.168.1.3:8000/api/";
-  static const String profilePicUrl =
-      "http://192.168.1.3:8000/public/storage/users/";
+  static const String baseUrl = "http://192.168.1.2:8000/";
+  // static const String profilePicUrl = "${baseUrl}public/storage/users/";
+  // static const String imageUrl = "${baseUrl}public/storage/images/";
 
-  static const String registrationUri = "${baseUrl}auth/register";
-  static const String loginUri = "${baseUrl}auth/login";
-  static const String logoutUri = "${baseUrl}auth/logout";
-  static const String userUri = "${baseUrl}auth/me";
-  static const String googleLoginUri = "${baseUrl}auth/google-login";
-  static const String forgotPasswordUri = '${baseUrl}forgot-password';
+  static const String profilePicUrl = "${baseUrl}storage/users/";
+  static const String imageUrl = "${baseUrl}storage/images/";
+
+  static const String registrationUri = "${baseUrl}api/auth/register";
+  static const String loginUri = "${baseUrl}api/auth/login";
+  static const String logoutUri = "${baseUrl}api/auth/logout";
+  static const String userUri = "${baseUrl}api/auth/me";
+  static const String googleLoginUri = "${baseUrl}api/auth/google-login";
+  static const String forgotPasswordUri = '${baseUrl}api/forgot-password';
+  static const String allCategoryUri = '${baseUrl}api/auth/all-category';
 }
