@@ -40,3 +40,4 @@ export '../widgets/wcounter_icon.dart';
 export '../widgets/wsearch_container.dart';
 export '../widgets/wsection_heading.dart';
 export '../widgets/wcategory_list.dart';
+export '../widgets/wbanner.dart';

@@ -10,7 +10,7 @@ class WPrimaryHeaderContainer extends StatelessWidget {
         color: WColors.primary,
         padding: EdgeInsets.only(bottom: 0),
         child: SizedBox(
-          height: 400,
+          height: MediaQuery.of(context).size.height * 0.40, //     (350 / 812),
           child: Stack(
             children: [
               Positioned(

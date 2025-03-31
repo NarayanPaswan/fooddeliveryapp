@@ -1,4 +1,5 @@
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/services.dart';
 import 'package:fooddelivery/controller/home_controller_provider.dart';
 import 'package:fooddelivery/splash_screen.dart';
 import 'package:provider/provider.dart';
@@ -6,10 +7,19 @@ import 'controller/authControllerProvider/auth_controller_provider.dart';
 import 'controller/database/database_controller_provider.dart';
 import '/utils/exports.dart';
 
-void main() async {
+// void main() async {
+//   WidgetsFlutterBinding.ensureInitialized();
+//   await Firebase.initializeApp();
+//   runApp(const MyApp());
+// }
+
+void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
-  runApp(const MyApp());
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp, // Only allow portrait mode
+  ]).then((_) {
+    runApp(MyApp());
+  });
 }
 
 class MyApp extends StatelessWidget {
