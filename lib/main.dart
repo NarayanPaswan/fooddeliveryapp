@@ -13,8 +13,9 @@ import '/utils/exports.dart';
 //   runApp(const MyApp());
 // }
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp, // Only allow portrait mode
   ]).then((_) {

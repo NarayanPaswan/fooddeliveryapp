@@ -17,6 +17,7 @@ class WImages {
       "assets/images/on_boarding_images/sammy-line-delivery.gif";
   static const String onBoardingImage4 =
       "assets/images/on_boarding_images/sammy-line-shopping.gif";
-  static const String banner1 = "assets/images/banner_3.jpg";
-  static const String banner2 = "assets/images/banner_2.jpg";
+  static const String banner1 = "assets/images/nike-shoes.png";
+  static const String banner2 = "assets/images/lachapratha.jpeg";
+  static const String banner3 = "assets/images/masalaculcha.jpeg";
 }

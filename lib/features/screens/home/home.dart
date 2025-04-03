@@ -1,4 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:fooddelivery/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:provider/provider.dart';
 import '../../../controller/home_controller_provider.dart';
 import '/widgets/appbar/appbar.dart';
@@ -40,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final dark = WHelperFunctions.isDarkMode(context);
+    // final dark = WHelperFunctions.isDarkMode(context);
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -263,6 +264,25 @@ class _HomeScreenState extends State<HomeScreen> {
                         autoPlay: false,
                       ),
                     );
+                  },
+                ),
+
+                //vertical product
+                SizedBox(height: WSizes.spaceBtwItems),
+                //gridview
+                GridView.builder(
+                  itemCount: 4,
+                  shrinkWrap: true,
+                  padding: EdgeInsets.zero,
+                  physics: NeverScrollableScrollPhysics(),
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    mainAxisSpacing: WSizes.gridViewSpacing,
+                    crossAxisSpacing: WSizes.gridViewSpacing,
+                    mainAxisExtent: 288,
+                  ),
+                  itemBuilder: (_, index) {
+                    return WProductCardVertical();
                   },
                 ),
               ],
