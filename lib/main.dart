@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/services.dart';
 import 'package:fooddelivery/controller/home_controller_provider.dart';
+import 'package:fooddelivery/controller/product_provider.dart';
 import 'package:fooddelivery/splash_screen.dart';
 import 'package:provider/provider.dart';
 import 'controller/authControllerProvider/auth_controller_provider.dart';
@@ -36,6 +37,7 @@ class MyApp extends StatelessWidget {
         ),
         ChangeNotifierProvider(create: (_) => DatabaseControllerProvider()),
         ChangeNotifierProvider(create: (_) => HomeControllerProvider()),
+        ChangeNotifierProvider(create: (_) => ProductProvider()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

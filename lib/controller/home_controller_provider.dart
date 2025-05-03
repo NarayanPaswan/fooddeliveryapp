@@ -1,4 +1,3 @@
-import 'package:dio/dio.dart';
 import 'package:fooddelivery/model/banner_model.dart';
 import '../model/category_model.dart';
 import '../../utils/exports.dart';
@@ -101,31 +100,4 @@ class HomeControllerProvider extends ChangeNotifier {
     }
     return _filteredBanners;
   }
-
-  /*
-  Future<AllCategoryModel?> fetchAllCategory() async {
-    final token = await DatabaseControllerProvider().getToken();
-    try {
-      const urlAllCategory = AppUrl.allCategoryUri;
-
-      final response = await dio.get(
-        urlAllCategory,
-        options: Options(
-          headers: {
-            'Content-Type': 'application/json',
-            "Authorization": "Bearer $token",
-          },
-        ),
-      );
-
-      return AllCategoryModel.fromJson(response.data);
-      // print(response.data);
-    } catch (error) {
-      if (kDebugMode) {
-        print('Error fetching on boarding: $error');
-      }
-      return null;
-    }
-  }
-  */
 }

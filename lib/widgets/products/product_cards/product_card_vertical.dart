@@ -2,7 +2,14 @@ import '/widgets/texts/product_title_text.dart';
 import '/utils/exports.dart';
 
 class WProductCardVertical extends StatelessWidget {
-  const WProductCardVertical({super.key});
+  final String discountText, productName, subProductName, priceText;
+  const WProductCardVertical({
+    super.key,
+    this.discountText = "25%",
+    this.productName = "Lacha",
+    this.subProductName = "awesome lacha paratha",
+    this.priceText = "Rs. 250%",
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +47,8 @@ class WProductCardVertical extends StatelessWidget {
                         vertical: WSizes.xs,
                       ),
                       child: Text(
-                        "25%",
+                        // "25%",
+                        discountText,
                         style: Theme.of(
                           context,
                         ).textTheme.labelLarge!.apply(color: WColors.black),
@@ -68,18 +76,16 @@ class WProductCardVertical extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  WProductTextTitle(
-                    title: 'awesome lacha paratha',
-                    smallSize: true,
-                  ),
-                  SizedBox(height: WSizes.spaceBtwItems / 2),
                   Row(
                     children: [
-                      Text(
-                        "Lacha",
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 1,
-                        style: Theme.of(context).textTheme.labelMedium,
+                      Expanded(
+                        child: Text(
+                          // "Lacha",
+                          productName,
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 1,
+                          style: Theme.of(context).textTheme.titleLarge,
+                        ),
                       ),
                       SizedBox(width: WSizes.xs),
                       Icon(
@@ -89,12 +95,20 @@ class WProductCardVertical extends StatelessWidget {
                       ),
                     ],
                   ),
+                  SizedBox(height: WSizes.spaceBtwItems / 2),
+                  WProductTextTitle(
+                    // title: 'awesome lacha paratha',
+                    title: subProductName,
+                    smallSize: true,
+                  ),
+
                   // Spacer(),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        "Rs. 250",
+                        // "Rs. 250",
+                        priceText,
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: Theme.of(context).textTheme.headlineMedium,

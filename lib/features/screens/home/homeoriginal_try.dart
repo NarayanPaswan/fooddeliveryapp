@@ -1,5 +1,7 @@
+// import 'dart:io';
 // import 'package:carousel_slider/carousel_slider.dart';
 // import 'package:provider/provider.dart';
+// import '../../../controller/database/database_controller_provider.dart';
 // import '../../../controller/home_controller_provider.dart';
 // import '/widgets/appbar/appbar.dart';
 // import '/utils/exports.dart';
@@ -31,15 +33,16 @@
 //       videoId: videoId,
 //       autoPlay: false,
 //       params: YoutubePlayerParams(
-//         showFullscreenButton: false, // ❌ Hide fullscreen button
+//         showFullscreenButton: false, // Hide fullscreen button
 //         showControls: true,
-//         strictRelatedVideos: true, // ✅ Prevents suggested video thumbnails
+//         strictRelatedVideos: true, // Prevents suggested video thumbnails
 //       ),
 //     );
 //   }
 
 //   @override
 //   Widget build(BuildContext context) {
+//     // final dark = WHelperFunctions.isDarkMode(context);
 //     return Scaffold(
 //       body: SingleChildScrollView(
 //         child: Column(
@@ -88,28 +91,78 @@
 //                         SizedBox(
 //                           height:
 //                               MediaQuery.of(context).size.height *
-//                               0.13, //     (120 / 812),
+//                               0.13, // Adjust height
 //                           child: Consumer<HomeControllerProvider>(
 //                             builder: (context, homeControllerProvider, child) {
 //                               if (homeControllerProvider
 //                                   .categoriesList
 //                                   .isEmpty) {
-//                                 return Center(
-//                                   child: Text(
-//                                     "No Banners Available",
-//                                     style: TextStyle(fontSize: 16),
-//                                   ),
-//                                 ); // Show a message if no banners are available
+//                                 return ListView.builder(
+//                                   shrinkWrap: true,
+//                                   scrollDirection: Axis.horizontal,
+//                                   itemCount: 5, // Show 5 shimmer placeholders
+//                                   itemBuilder: (_, index) {
+//                                     return Padding(
+//                                       padding: const EdgeInsets.only(
+//                                         right: WSizes.spaceBtwItems,
+//                                       ),
+//                                       child: Shimmer.fromColors(
+//                                         baseColor: Colors.grey.shade400,
+//                                         highlightColor: Colors.grey.shade100,
+//                                         child: Column(
+//                                           children: [
+//                                             Container(
+//                                               width:
+//                                                   MediaQuery.of(
+//                                                     context,
+//                                                   ).size.width *
+//                                                   0.15,
+//                                               height:
+//                                                   MediaQuery.of(
+//                                                     context,
+//                                                   ).size.height *
+//                                                   0.07,
+//                                               decoration: BoxDecoration(
+//                                                 color:
+//                                                     Colors
+//                                                         .grey
+//                                                         .shade300, // Placeholder color
+//                                                 borderRadius:
+//                                                     BorderRadius.circular(100),
+//                                               ),
+//                                             ),
+//                                             SizedBox(
+//                                               height: WSizes.spaceBtwItems / 2,
+//                                             ),
+//                                             Container(
+//                                               width:
+//                                                   MediaQuery.of(
+//                                                     context,
+//                                                   ).size.width *
+//                                                   0.12,
+//                                               height: 10,
+//                                               color:
+//                                                   Colors
+//                                                       .grey
+//                                                       .shade300, // Placeholder for text
+//                                             ),
+//                                           ],
+//                                         ),
+//                                       ),
+//                                     );
+//                                   },
+//                                 );
 //                               }
+
+//                               // Render actual category list when available
 //                               return ListView.builder(
 //                                 shrinkWrap: true,
+//                                 scrollDirection: Axis.horizontal,
 //                                 itemCount:
 //                                     homeControllerProvider
 //                                         .categoriesList
 //                                         .length,
-//                                 scrollDirection: Axis.horizontal,
 //                                 itemBuilder: (_, index) {
-//                                   // ✅ Access the category item correctly using index
 //                                   final category =
 //                                       homeControllerProvider
 //                                           .categoriesList[index];
@@ -117,9 +170,7 @@
 //                                     image:
 //                                         AppUrl.imageUrl +
 //                                         (category.image ?? ""),
-//                                     title:
-//                                         category.name ??
-//                                         "Unknown", // Fallback for missing name
+//                                     title: category.name ?? "Unknown",
 //                                     onTap: () {
 //                                       if (kDebugMode) {
 //                                         print("Tapped on ${category.name}");
@@ -145,15 +196,9 @@
 //                 Consumer<HomeControllerProvider>(
 //                   builder: (context, homeControllerProvider, child) {
 //                     if (homeControllerProvider.bannersList.isEmpty) {
-//                       // return Center(
-//                       //   child: Text(
-//                       //     "No Banners Available",
-//                       //     style: TextStyle(fontSize: 16),
-//                       //   ),
-//                       // ); // Show a message if no banners are available
-
-//                       return SizedBox(
+//                       return Container(
 //                         width: double.infinity,
+//                         margin: EdgeInsets.symmetric(horizontal: 5),
 //                         height:
 //                             MediaQuery.of(context).size.width *
 //                             (6 / 16), // Adjust height as needed
@@ -219,6 +264,27 @@
 //                         viewportFraction: 1,
 //                         autoPlay: false,
 //                       ),
+//                     );
+//                   },
+//                 ),
+
+//                 //vertical product
+//                 SizedBox(height: WSizes.spaceBtwItems),
+//                 //gridview
+//                 GridView.builder(
+//                   itemCount: 4,
+//                   shrinkWrap: true,
+//                   padding: EdgeInsets.zero,
+//                   physics: NeverScrollableScrollPhysics(),
+//                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+//                     crossAxisCount: 2,
+//                     mainAxisSpacing: WSizes.gridViewSpacing,
+//                     crossAxisSpacing: WSizes.gridViewSpacing,
+//                     mainAxisExtent: 288,
+//                   ),
+//                   itemBuilder: (_, index) {
+//                     return WProductCardVertical(
+//                       productName: "Butter Tandoori Roti",
 //                     );
 //                   },
 //                 ),

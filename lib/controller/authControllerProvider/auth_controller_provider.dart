@@ -1,5 +1,4 @@
 import 'dart:io';
-import 'package:dio/dio.dart';
 import '../database/database_controller_provider.dart';
 import '../../utils/exports.dart';
 

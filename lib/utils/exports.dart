@@ -46,3 +46,4 @@ export '../features/screens/home/wrounded_container.dart';
 export '../widgets/products/product_cards/wrounded_image.dart';
 export '../widgets/icon/w_circular_icon.dart';
 export '../widgets/products/product_cards/product_card_vertical.dart';
+export 'package:dio/dio.dart';

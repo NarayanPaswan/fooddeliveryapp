@@ -11,4 +11,5 @@ class AppUrl {
   static const String forgotPasswordUri = '${baseUrl}api/forgot-password';
   static const String allCategoryUri = '${baseUrl}api/auth/all-category';
   static const String allBannerUri = '${baseUrl}api/auth/all-banner';
+  static const String allProductUri = '${baseUrl}api/auth/all-products';
 }
