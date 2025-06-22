@@ -56,22 +56,13 @@ class AppTextFormField extends StatelessWidget {
               ),
             ),
           ),
-        // TextFormField(
-        //           decoration: InputDecoration(
-        //             prefixIcon: Icon(Iconsax.direct_right),
-        //             labelText: WTexts.email,
-        //           ),
-        //         ),
+
         TextFormField(
           onTap: onTap,
           readOnly: readOnly,
           decoration: InputDecoration(
             hintText: hintText,
-            // filled: true,
-            // fillColor: Colors.white,
-            // border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
             prefixIcon: prefixIcon != null ? Icon(prefixIcon) : null,
-            // labelText: labelText,
             suffixIcon:
                 suffixIcon != null
                     ? IconButton(

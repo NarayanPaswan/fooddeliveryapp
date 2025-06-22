@@ -47,4 +47,9 @@ class WColors {
 
   //sack_message
   static Color primaryColor = const Color(0xff130160);
+  static const Color navigationBgColor = Color.fromARGB(255, 243, 244, 244);
+  static const Color dashboardColor = Color(0xffFF7A00);
+  static const Color disableColor = Color.fromARGB(255, 233, 224, 224);
+  static const Color ordersColor = Color(0xff972FFF);
+  static const Color accountColor = Color(0xff53E0CE);
 }

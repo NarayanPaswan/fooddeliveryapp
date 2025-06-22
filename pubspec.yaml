@@ -16,31 +16,32 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
-  animations: any
-  cached_network_image: any
-  carousel_slider: any
-  cupertino_icons: any
-  device_info_plus: any
-  dio: any
-  firebase_core: any
-  firebase_messaging: any
+  animations: null
+  cached_network_image: null
+  carousel_slider: null
+  cupertino_icons: null
+  curved_labeled_navigation_bar: null
+  device_info_plus: null
+  dio: null
+  firebase_core: null
+  firebase_messaging: null
   flutter:
     sdk: flutter
-  flutter_facebook_auth: any
-  flutter_native_splash: any
-  geocoding: any
-  geolocator: any
-  google_sign_in: any
-  iconsax: any
+  flutter_facebook_auth: null
+  flutter_native_splash: null
+  geocoding: null
+  geolocator: null
+  google_sign_in: null
+  iconsax: null
   intl: ^0.20.2
-  jwt_decoder: any
-  permission_handler: any
-  provider: any
-  shared_preferences: any
-  shimmer: any
-  smooth_page_indicator: any
-  url_launcher: any
-  youtube_player_iframe: any
+  jwt_decoder: null
+  permission_handler: null
+  provider: null
+  shared_preferences: null
+  shimmer: null
+  smooth_page_indicator: null
+  url_launcher: null
+  youtube_player_iframe: null
 
 dev_dependencies:
   flutter_lints: ^5.0.0

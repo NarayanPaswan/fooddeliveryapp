@@ -1,5 +1,5 @@
+import 'package:fooddelivery/features/screens/landing/landing_screen.dart';
 import '/features/screens/home/admin_home.dart';
-import '/features/screens/home/home.dart';
 import '/features/screens/onboarding/onboarding.dart';
 import 'package:jwt_decoder/jwt_decoder.dart';
 
@@ -44,7 +44,7 @@ class _AuthWrapperState extends State<AuthWrapper> {
             DatabaseControllerProvider().logOut();
             return const OnBoardingScreen();
           } else if (roleId == '3') {
-            return const HomeScreen();
+            return const LandingScreen();
           } else {
             // Token is valid, show HomeView
             return const AdminHomeScreen();

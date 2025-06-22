@@ -58,6 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
           WPrimaryHeaderContainer(
             child: Column(
               children: [
+                SizedBox(height: WSizes.borderRadiusMd),
                 WAppBar(
                   showBackArrow: false,
                   title: Column(
@@ -83,22 +84,14 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
                 //search bar
-                SizedBox(height: WSizes.spaceBtwItems),
-                // WSearchContainer(text: WTexts.searchYourFood),
-                TextField(
+                // SizedBox(height: WSizes.spaceBtwItems),
+                WSearchContainer(
                   onChanged: (value) {
                     provider.page = 1;
                     provider.productList.clear();
                     provider.hasMoreData = true;
                     provider.fetchAllProduct(searchQuery: value);
                   },
-                  decoration: InputDecoration(
-                    hintText: 'Search product...',
-                    prefixIcon: Icon(Icons.search),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                  ),
                 ),
 
                 //category heding

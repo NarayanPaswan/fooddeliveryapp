@@ -47,3 +47,5 @@ export '../widgets/products/product_cards/wrounded_image.dart';
 export '../widgets/icon/w_circular_icon.dart';
 export '../widgets/products/product_cards/product_card_vertical.dart';
 export 'package:dio/dio.dart';
+export 'package:curved_labeled_navigation_bar/curved_navigation_bar.dart';
+export 'package:curved_labeled_navigation_bar/curved_navigation_bar_item.dart';
